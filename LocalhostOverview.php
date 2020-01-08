@@ -13,7 +13,7 @@ class LocalhostOverview
 	public function __construct( $bSaveFavicon = true )
 	{
 
-		$sWebFolder = preg_replace( '/localhost$/', '', $_SERVER[ 'DOCUMENT_ROOT' ] );
+		$sWebFolder = preg_replace( '/localhost$/', '', __DIR__ );
 
 		$aFolders = glob( $sWebFolder . '*', GLOB_ONLYDIR );
 		foreach ( $aFolders as $sFolderName ) {
@@ -115,6 +115,10 @@ class LocalhostOverview
 
 		} else {
 
+			if ( ! file_exists( __DIR__ . $this->sFaviconLocation ) ) {
+				mkdir( __DIR__ . $this->sFaviconLocation );
+			}
+
 			foreach ( $this->aWebsiteData as $aData ) {
 
 				if ( $aData[ 'favicon' ] ) {
@@ -125,8 +129,9 @@ class LocalhostOverview
 					} else {
 						if ( filemtime( __DIR__ . $aData[ 'favicon' ] ) ) {
 							if ( date( 'Y-m-d', filemtime( __DIR__ . $aData[ 'favicon' ] ) ) !== date( 'Y-m-d' ) ) {
-								$sLocation = __DIR__ . $this->sFaviconLocation . $aData[ 'name' ] . '.' . pathinfo( parse_url( $this->getFaviconUrl( $aData[ 'name' ] ) )[ 'path' ], PATHINFO_EXTENSION );
-								file_put_contents( $sLocation, file_get_contents( $aData[ 'favicon' ] ) );
+								$sFaviconUrl = $this->getFaviconUrl( $aData[ 'name' ] );
+								$sLocation   = __DIR__ . $this->sFaviconLocation . $aData[ 'name' ] . '.' . pathinfo( parse_url( $sFaviconUrl )[ 'path' ], PATHINFO_EXTENSION );
+								file_put_contents( $sLocation, file_get_contents( $sFaviconUrl ) );
 							}
 						}
 					}

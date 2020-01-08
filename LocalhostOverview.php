@@ -111,7 +111,11 @@ class LocalhostOverview
 
 		if ( ! $bIsAsync ) {
 
-			pclose( popen( "start /B php download_favicons.php", "r" ) );
+			$sPhpExecutable = ini_get( 'extension_dir' );
+			$sPhpExecutable = rtrim( $sPhpExecutable, '/\\' );
+			$sPhpExecutable = preg_replace( '/ext$/', 'php.exe', $sPhpExecutable );
+
+			pclose( popen( 'start /B ' . $sPhpExecutable . ' download_favicons.php', 'r' ) );
 
 		} else {
 

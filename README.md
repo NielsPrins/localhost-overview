@@ -8,7 +8,7 @@ Go to localhost to view all your projects.
 Clicking on a project will open the projects page.  
 This is done with the help of [localtest.me](https://readme.localtest.me/ "readme.localtest.me").  
 The URL of your project will be [name_of_folder].localtest.me  
-This way you can start immediately when starting a new project, No configs needed!
+This way you can begin programming immediately when starting a new project, no configs needed!
 
 # Installation
 #### XAMPP

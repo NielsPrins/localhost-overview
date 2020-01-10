@@ -8,8 +8,8 @@ $oLocalhostOverview = new LocalhostOverview();
     <title>Localhost overview</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="icon" type="image/png" href="/assets/favicon.png"/>
 </head>
 <body>
 

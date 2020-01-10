@@ -18,7 +18,7 @@ LoadModule vhost_alias_module modules/mod_vhost_alias.so
 ```
 
 Enable the new URL's by replacing the content of "C:\xampp\apache\conf\extra\httpd-vhosts.conf" with:
-```
+``` apacheconfig
 <VirtualHost *:80>
 	ServerName localhost
 	DocumentRoot "C:/xampp/htdocs/localhost-overview"

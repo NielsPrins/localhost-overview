@@ -115,7 +115,7 @@ class LocalhostOverview
 			$sPhpExecutable = rtrim( $sPhpExecutable, '/\\' );
 			$sPhpExecutable = preg_replace( '/ext$/', 'php.exe', $sPhpExecutable );
 
-			if ( ! file_exists( $sPhpExecutable ) ) {
+			if ( ! preg_match( '/php\.exe$/', $sPhpExecutable ) ) {
 				$sPhpExecutable = 'php';
 			}
 

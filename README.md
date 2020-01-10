@@ -1,5 +1,5 @@
 <p align="center">
-  <img  src="https://raw.githubusercontent.com/NielsPrins/localhost-overview/master/assets/logo.svg?sanitize=true" height="40" width="1200">
+  <img  src="https://user-images.githubusercontent.com/28888849/72172628-ea4a2600-33d5-11ea-9f2e-bbdf5137676e.jpg" height="50">
 </p>
 <div align="center">A quick overview of all your locally hosted projects.</div>
 

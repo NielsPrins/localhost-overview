@@ -13,12 +13,12 @@ class LocalhostOverview
 	public function __construct( $bSaveFavicon = true )
 	{
 
-		$sWebFolder = preg_replace( '/localhost$/', '', __DIR__ );
+		$sWebFolder = preg_replace( '/localhost-overview$/', '', __DIR__ );
 
 		$aFolders = glob( $sWebFolder . '*', GLOB_ONLYDIR );
 		foreach ( $aFolders as $sFolderName ) {
 			$sFolderName = str_replace( $sWebFolder, '', $sFolderName );
-			if ( $sFolderName !== 'localhost' ) {
+			if ( $sFolderName !== 'localhost-overview' ) {
 				$this->aWebsiteData[] =
 					[
 						'name'    => $sFolderName,

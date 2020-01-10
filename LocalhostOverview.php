@@ -111,15 +111,19 @@ class LocalhostOverview
 
 		if ( ! $bIsAsync ) {
 
-			$sPhpExecutable = ini_get( 'extension_dir' );
-			$sPhpExecutable = rtrim( $sPhpExecutable, '/\\' );
-			$sPhpExecutable = preg_replace( '/ext$/', 'php.exe', $sPhpExecutable );
+			if ( strtoupper( substr( PHP_OS, 0, 3 ) ) === 'WIN' ) {
 
-			if ( ! preg_match( '/php\.exe$/', $sPhpExecutable ) ) {
-				$sPhpExecutable = 'php';
+				$sPhpExecutable = ini_get( 'extension_dir' );
+				$sPhpExecutable = rtrim( $sPhpExecutable, '/\\' );
+				$sPhpExecutable = preg_replace( '/ext$/', 'php.exe', $sPhpExecutable );
+				pclose( popen( 'start /B ' . $sPhpExecutable . ' download_favicons.php', 'r' ) );
+
+			} else {
+
+				pclose( popen( 'php download_favicons.php', 'r' ) );
+
 			}
 
-			pclose( popen( 'start /B ' . $sPhpExecutable . ' download_favicons.php', 'r' ) );
 
 		} else {
 

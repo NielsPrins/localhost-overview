@@ -7,7 +7,7 @@
 Go to localhost to view all your projects.  
 Clicking on a project will open the projects page.  
 This is done with the help of [localtest.me](https://readme.localtest.me/ "readme.localtest.me").  
-The URL of your project will be [name_of_folder].localtest.me  
+The URL of your project will be: [name_of_folder].localtest.me  
 This way you can begin programming immediately when starting a new project, no configs needed!
 
 # Installation
@@ -34,7 +34,7 @@ Then navigate to your XAMPP folder ("C:\xampp\htdocs") and clone this repo:
 ```
 git clone https://github.com/NielsPrins/localhost-overview.git
 ```
-Your all done!
+Your all done!  
 Start new project by adding a folder in "C:\xampp\htdocs" or copy old projects over.
 
 #### WampServer
@@ -56,7 +56,7 @@ Then navigate to your WampServer folder ("C:\wamp64\www") and clone this repo:
 ```
 git clone https://github.com/NielsPrins/localhost-overview.git
 ```
-Your all done!
+Your all done!  
 Start new project by adding a folder in "C:\wamp64\www" or copy old projects over.
 
 # Screenshots

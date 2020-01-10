@@ -53,7 +53,7 @@ class LocalhostOverview
 	private function getFavicon( $sDomainName )
 	{
 		if ( $aFiles = glob( __DIR__ . $this->sFaviconLocation . $sDomainName . '.{jpg,jpeg,png,gif,ico}', GLOB_BRACE ) ) {
-			return preg_replace( '/^' . preg_quote( __DIR__ ) . '/', '', $aFiles[ 0 ] );
+			return substr( $aFiles[ 0 ], strlen( __DIR__ ) );
 		} else {
 			return $this->getFaviconUrl( $sDomainName );
 		}

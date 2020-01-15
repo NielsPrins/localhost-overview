@@ -59,6 +59,49 @@ git clone https://github.com/NielsPrins/localhost-overview.git
 Your all done!  
 Start new project by adding a folder in "C:\wamp64\www" or copy old projects over.
 
+#### Linux (ubuntu)
+
+Enable "mod_vhost_alias":
+```
+sudo a2enmod vhost_alias
+```
+
+Enable the new URL's by replacing the content of "/etc/apache2/sites-available/000-default.conf" with:
+```
+<VirtualHost *:80>
+	ServerName localhost
+	DocumentRoot "/var/www/localhost-overview"
+</VirtualHost>
+
+<VirtualHost *:80>
+	ServerAlias *.localtest.me
+	VirtualDocumentRoot "/var/www/%-3+/"
+</VirtualHost>
+```
+
+Make sure you have "php-curl" installed:
+```
+sudo apt-get install php-curl -y
+```
+
+Then navigate to the web folder folder ("/var/www/") and clone this repo
+```
+git clone https://github.com/NielsPrins/localhost-overview.git
+```
+
+Make sure apache can access the folder
+```
+sudo chown -R www-data:www-data /var/www/localhost-overview/
+```
+
+Restart apache with all the changes we've just made 
+```
+sudo systemctl restart apache2
+```
+Your all done!  
+Start new project by adding a folder in "C:\wamp64\www" or copy old projects over.
+
+
 # Screenshots
 
 ![Localhost overview](https://user-images.githubusercontent.com/28888849/72179795-fccc5b80-33e5-11ea-805c-7a0815c741be.png "Localhost overview")

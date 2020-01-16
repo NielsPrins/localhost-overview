@@ -34,7 +34,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease-out .1s;
 }
 
 a > img {
@@ -47,6 +46,7 @@ a:hover {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, .175) !important;
+    transition: all .3s ease-out .1s;
 }
 
 a:link {

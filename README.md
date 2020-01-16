@@ -35,7 +35,7 @@ Then navigate to your XAMPP folder ("C:\xampp\htdocs") and clone this repo:
 git clone https://github.com/NielsPrins/localhost-overview.git
 ```
 Your all done!  
-Start new project by adding a folder in "C:\xampp\htdocs" or copy old projects over.
+start a new project by adding a folder in "C:\xampp\htdocs" or copy old projects over.
 
 #### WampServer
 
@@ -57,7 +57,7 @@ Then navigate to your WampServer folder ("C:\wamp64\www") and clone this repo:
 git clone https://github.com/NielsPrins/localhost-overview.git
 ```
 Your all done!  
-Start new project by adding a folder in "C:\wamp64\www" or copy old projects over.
+start a new project by adding a folder in "C:\wamp64\www" or copy old projects over.
 
 #### Linux (ubuntu)
 
@@ -99,7 +99,7 @@ Restart apache with all the changes we've just made
 sudo systemctl restart apache2
 ```
 Your all done!  
-Start new project by adding a folder in "C:\wamp64\www" or copy old projects over.
+start a new project by adding a folder in "C:\wamp64\www" or copy old projects over.
 
 
 # Screenshots

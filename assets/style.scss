@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'campton';
+    src: url("/assets/campton.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #F3E05E;
+    font-family: "campton", Arial, Helvetica, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    margin: 0;
+}
+
+.domain_links {
+    width: 100%;
+    display: grid;
+    margin: 3rem !important;
+
+    a {
+        background-color: #FFF;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+        border-radius: .25rem !important;
+        padding: 1rem !important;
+        margin: 2rem !important;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        &:hover {
+
+            -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, .175) !important;
+            transition: all .3s ease-out .1s;
+        }
+
+        &:link {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        &:visited {
+            text-decoration: inherit;
+            color: inherit;
+        }
+    }
+}
+
+.php_my_admin_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #FFF;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    border-radius: 0.25rem !important;
+    padding: 0.75rem !important;
+    margin: 2rem !important;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}

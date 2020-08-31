@@ -13,6 +13,12 @@ $oLocalhostOverview = new LocalhostOverview();
 </head>
 <body>
 
+<?php
+if ( $oLocalhostOverview->hasPhpMyAdmin() ) {
+	echo '<a class="php_my_admin_button" href="http://localhost/phpmyadmin/"><img src="assets/php_my_admin.ico" alt="phpMyAdmin"></a>';
+}
+?>
+
 <div class="domain_links" style="grid-template-columns: repeat(<?php echo $oLocalhostOverview->getItemWidth(); ?>, 1fr);">
 	<?php
 	foreach ( $oLocalhostOverview->getWebsites() as $aData ) {

@@ -154,4 +154,16 @@ class LocalhostOverview
 		}
 	}
 
+	public function hasPhpMyAdmin()
+	{
+
+		try {
+			if ( $sContent = @file_get_contents( 'http://localhost/phpmyadmin/' ) ) {
+				return true;
+			}
+		} catch ( Exception $e ) {
+		}
+
+		return false;
+	}
 }
